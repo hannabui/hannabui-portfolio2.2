@@ -1,7 +1,8 @@
 //My second project of option 1.1 is Lab 7.
 //I've added additional componenets such as:
-//
-import { StatusBar } from "expo-status-bar";
+//Changing the colors of the to-do list
+//Adding due dates as an additional input field
+//Added stars to to-do list items to mark as important
 import { useCallback, useState } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { CheckBox, Input, Button } from "react-native-elements";
