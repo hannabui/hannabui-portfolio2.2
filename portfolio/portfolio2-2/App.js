@@ -1,4 +1,3 @@
-//My second project of option 1.1 is Lab 7.
 //I've added additional componenets such as:
 //Changing the colors of the to-do list
 //Adding due dates as an additional input field
