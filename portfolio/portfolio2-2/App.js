@@ -3,15 +3,16 @@
 //Adding due dates as an additional input field
 //Added stars to to-do list items to mark as important
 import { useCallback, useState } from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from "react-native";
 import { CheckBox, Input, Button } from "react-native-elements";
 
 export default function App() {
   let [inputText, setInputText] = useState("")
+  let [bg, setBg] = useState("")
   let [tasks, setTasks] = useState([
-    { description: "Task 1", key: "1", completed: true },
-    { description: "Task 2", key: "2", completed: false },
-    { description: "Task 3", key: "3", completed: false },
+    { description: "Task 1", key: "1", completed: true, fav:false },
+    { description: "Task 2", key: "2", completed: false, fav:false },
+    { description: "Task 3", key: "3", completed: false, fav:false },
   ])
   let addTask = useCallback(() => {
     let keys = tasks.map((task) => parseInt(task.key))
@@ -24,8 +25,23 @@ export default function App() {
     setTasks([...tasks, newTask]);
     setInputText("");
   }, [inputText]);
+
+  let changeBackground=(color)=>{
+    setBg(color)
+  }
+
+  let deleteItem=(key)=>{
+   setTasks( tasks.filter(task => task.key != key))
+  }
+
+  let addFav=(taskS)=>{
+    let selectedTask= tasks.find(task => task.key ==taskS.key)
+    selectedTask.fav= !selectedTask.fav
+
+   setTasks([...tasks ])
+  }
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: bg }]}>
       <View style={styles.innerContainer}>
         <Text style={styles.title}>TODO APP</Text>
           <Input
@@ -38,7 +54,10 @@ export default function App() {
           data={tasks}
           keyExtractor={(item) => item.key}
           renderItem={({ item: task }) =>
-            <CheckBox
+            <View style={[styles.listItem, {
+             backgroundColor: task.fav ? 'lightpink':''
+            } ] } >
+              <CheckBox
               onPress={() => {
                 let curTask = tasks.find(t => t.key == task.key);
                 curTask.completed = !curTask.completed
@@ -50,7 +69,19 @@ export default function App() {
                     textDeorationStyle: 'solid',
                   } : undefined}
             ></CheckBox>
+              <Button  onPress={()=> addFav(task)} title="Fave"></Button>
+              <Button  onPress={()=> deleteItem(task.key)} title="Delete"></Button>
+            </View>
           } />
+      </View>
+      <View style={styles.colorsWrapper}>
+      <TouchableOpacity style={[styles.colorBox, styles.bgRed]} onPress={() => changeBackground("red")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgOrange]} onPress={() => changeBackground("orange")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgPurple]} onPress={() => changeBackground("purple")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgBlue]} onPress={() => changeBackground("blue")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgYellow]} onPress={() => changeBackground("yellow")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgGreen]} onPress={() => changeBackground("green")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgWhite]} onPress={() => changeBackground("white")} ></TouchableOpacity>
       </View>
     </View>
   );
@@ -68,6 +99,11 @@ const styles = StyleSheet.create({
     fontSize: 25,
     alignSelf: "center",
   },
+  listItem:{
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+  },
   innerContainer: {
     maxWidth: 300,
     alignItems: "center",
@@ -76,8 +112,40 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    flexDirection:'row',
     backgrounColor: "#fff",
     alignitems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
+  colorsWrapper:{
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "end"
+  },
+  colorBox:{
+    height: 20,
+    width: 30,
+    marginRight:5
+  },
+  bgRed:{
+    backgroundColor: "red"
+  },
+  bgOrange: {
+    backgroundColor: "orange"
+  },
+  bgGreen: {
+    backgroundColor: "green"
+  },
+  bgPurple: {
+    backgroundColor: "purple"
+  },
+  bgYellow: {
+    backgroundColor: "yellow"
+  },
+  bgBlue: {
+    backgroundColor: "blue"
+  },
+  bgWhite: {
+    backgroundColor: "white"
+  }
 });
