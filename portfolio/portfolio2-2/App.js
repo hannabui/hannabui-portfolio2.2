@@ -1,3 +1,4 @@
+//I chose option 1.1 where I work on two previous projects
 //I've added additional componenets such as:
 //Changing the colors of the to-do list
 //Adding a delete button to delete the to-do list items
