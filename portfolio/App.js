@@ -78,12 +78,12 @@ export default function App() {
       </View>
 
       <View style={styles.colorsWrapper}>
-      <TouchableOpacity style={[styles.colorBox, styles.bgRed]} onPress={() => changeBackground("red")} ></TouchableOpacity>
-      <TouchableOpacity style={[styles.colorBox, styles.bgOrange]} onPress={() => changeBackground("orange")} ></TouchableOpacity>
-      <TouchableOpacity style={[styles.colorBox, styles.bgPurple]} onPress={() => changeBackground("purple")} ></TouchableOpacity>
-      <TouchableOpacity style={[styles.colorBox, styles.bgBlue]} onPress={() => changeBackground("blue")} ></TouchableOpacity>
-      <TouchableOpacity style={[styles.colorBox, styles.bgYellow]} onPress={() => changeBackground("yellow")} ></TouchableOpacity>
-      <TouchableOpacity style={[styles.colorBox, styles.bgGreen]} onPress={() => changeBackground("green")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgRed]} onPress={() => changeBackground("#AA4A44")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgOrange]} onPress={() => changeBackground("#FF5F15")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgPurple]} onPress={() => changeBackground("#702963")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgBlue]} onPress={() => changeBackground("#7393B3")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgYellow]} onPress={() => changeBackground("#FDDA0D")} ></TouchableOpacity>
+      <TouchableOpacity style={[styles.colorBox, styles.bgGreen]} onPress={() => changeBackground("#8A9A5B")} ></TouchableOpacity>
       <TouchableOpacity style={[styles.colorBox, styles.bgWhite]} onPress={() => changeBackground("white")} ></TouchableOpacity>
       </View>
     </View>
@@ -131,22 +131,22 @@ const styles = StyleSheet.create({
     marginRight:5
   },
   bgRed:{
-    backgroundColor: "red"
+    backgroundColor: "#AA4A44"
   },
   bgOrange: {
-    backgroundColor: "orange"
+    backgroundColor: "#FF5F15"
   },
   bgGreen: {
-    backgroundColor: "green"
+    backgroundColor: "#8A9A5B"
   },
   bgPurple: {
-    backgroundColor: "purple"
+    backgroundColor: "#702963"
   },
   bgYellow: {
-    backgroundColor: "yellow"
+    backgroundColor: "#FDDA0D"
   },
   bgBlue: {
-    backgroundColor: "blue"
+    backgroundColor: "#7393B3"
   },
   bgWhite: {
     backgroundColor: "white"
