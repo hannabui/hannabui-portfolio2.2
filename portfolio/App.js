@@ -27,20 +27,21 @@ export default function App() {
     setInputText("");
   }, [inputText]);
 
-  let changeBackground=(color)=>{
+  let changeBackground = ((color) => {
     setBg(color)
-  }
+  })
 
-  let deleteItem=(key)=>{
+  let deleteItem = ((key) => {
    setTasks( tasks.filter(task => task.key != key))
-  }
+  })
 
-  let addFav=(taskS)=>{
+  let addFav = ((taskS) => {
     let selectedTask= tasks.find(task => task.key ==taskS.key)
     selectedTask.fav= !selectedTask.fav
 
    setTasks([...tasks ])
-  }
+  })
+
   return (
     <View style={[styles.container, {backgroundColor: bg }]}>
       <View style={styles.innerContainer}>
@@ -70,11 +71,12 @@ export default function App() {
                     textDeorationStyle: 'solid',
                   } : undefined}
             ></CheckBox>
-              <Button  onPress={()=> addFav(task)} title="Fave"></Button>
-              <Button  onPress={()=> deleteItem(task.key)} title="Delete"></Button>
+              <Button onPress={()=> addFav(task)} title="Fave"></Button>
+              <Button onPress={()=> deleteItem(task.key)} title="Delete"></Button>
             </View>
           } />
       </View>
+      
       <View style={styles.colorsWrapper}>
       <TouchableOpacity style={[styles.colorBox, styles.bgRed]} onPress={() => changeBackground("red")} ></TouchableOpacity>
       <TouchableOpacity style={[styles.colorBox, styles.bgOrange]} onPress={() => changeBackground("orange")} ></TouchableOpacity>
