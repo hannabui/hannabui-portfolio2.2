@@ -76,7 +76,7 @@ export default function App() {
             </View>
           } />
       </View>
-      
+
       <View style={styles.colorsWrapper}>
       <TouchableOpacity style={[styles.colorBox, styles.bgRed]} onPress={() => changeBackground("red")} ></TouchableOpacity>
       <TouchableOpacity style={[styles.colorBox, styles.bgOrange]} onPress={() => changeBackground("orange")} ></TouchableOpacity>
