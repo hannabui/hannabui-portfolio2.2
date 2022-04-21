@@ -1,7 +1,7 @@
 //I've added additional componenets such as:
 //Changing the colors of the to-do list
-//Adding due dates as an additional input field
-//Added stars to to-do list items to mark as important
+//Adding a delete button to delete the to-do list items
+//Added a favorite button to the to-do list items to mark as important
 import { useCallback, useState } from "react";
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from "react-native";
 import { CheckBox, Input, Button } from "react-native-elements";
