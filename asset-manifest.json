@@ -1,0 +1,38 @@
+{
+  "files": {
+    "app.js": "/hannabui-portfolio2.2/static/js/app.8ca34f40.chunk.js",
+    "app.js.map": "/hannabui-portfolio2.2/static/js/app.8ca34f40.chunk.js.map",
+    "runtime~app.js": "/hannabui-portfolio2.2/static/js/runtime~app.e6c7968d.js",
+    "runtime~app.js.map": "/hannabui-portfolio2.2/static/js/runtime~app.e6c7968d.js.map",
+    "static/js/2.db266172.chunk.js": "/hannabui-portfolio2.2/static/js/2.db266172.chunk.js",
+    "static/js/2.db266172.chunk.js.map": "/hannabui-portfolio2.2/static/js/2.db266172.chunk.js.map",
+    "fonts/AntDesign.ttf": "/hannabui-portfolio2.2/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/hannabui-portfolio2.2/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/hannabui-portfolio2.2/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/hannabui-portfolio2.2/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/hannabui-portfolio2.2/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/hannabui-portfolio2.2/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/hannabui-portfolio2.2/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/hannabui-portfolio2.2/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/hannabui-portfolio2.2/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/hannabui-portfolio2.2/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/hannabui-portfolio2.2/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/hannabui-portfolio2.2/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/hannabui-portfolio2.2/favicon-16.png",
+    "favicon-32.png": "/hannabui-portfolio2.2/favicon-32.png",
+    "favicon.ico": "/hannabui-portfolio2.2/favicon.ico",
+    "index.html": "/hannabui-portfolio2.2/index.html",
+    "manifest.json": "/hannabui-portfolio2.2/manifest.json",
+    "serve.json": "/hannabui-portfolio2.2/serve.json",
+    "static/js/2.db266172.chunk.js.LICENSE.txt": "/hannabui-portfolio2.2/static/js/2.db266172.chunk.js.LICENSE.txt",
+    "static/media/bell.png": "/hannabui-portfolio2.2/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/hannabui-portfolio2.2/static/media/heart.23b5c2c0.png",
+    "static/media/rocket.png": "/hannabui-portfolio2.2/static/media/rocket.d2f3bf41.png",
+    "static/media/star.png": "/hannabui-portfolio2.2/static/media/star.69c71386.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.e6c7968d.js",
+    "static/js/2.db266172.chunk.js",
+    "static/js/app.8ca34f40.chunk.js"
+  ]
+}
